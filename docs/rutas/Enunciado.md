@@ -48,7 +48,7 @@ Además:
 
 ## 4) Flujo manual recomendado (sin Maven), desde la raíz
 
-Ubícate en la raíz del proyecto (`laboratorio-rutas/`).
+Ubícate en la raíz del proyecto (`raíz`).
 
 ### Compilar a `out/` (sin ensuciar `src/`)
 
@@ -227,3 +227,24 @@ Si cambian nombres de carpetas, aplica siempre el mismo patrón:
 3. Ajusta `<salida>` y `<ruta-al-archivo>` según **dónde está tu terminal**.
 
 Esa es la mecánica universal.
+
+## 12) Compilación y ejecución con Maven
+
+En un proyecto Maven típico:
+
+1. Compilas con:
+
+```bash
+mvn compile
+```
+
+2. Ejecutas la clase principal con:
+
+```bash
+mvn exec:java -Dexec.mainClass="lab.rutas.Buscador" -Dexec.args="data/SecretFile.txt"
+```
+
+Maven se encarga de:
+- Compilar en `target/classes`.
+- Configurar automáticamente el classpath.
+- Ejecutar desde la raíz del proyecto.
