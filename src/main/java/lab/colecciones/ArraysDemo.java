@@ -60,7 +60,14 @@ public class ArraysDemo {
 
         // Transformar un array en una lista con Arrays.asList()
         List<String> listaNombres = Arrays.asList(nombres);
-
+       
+        // Transformar una lista en un array con List.toArray()
+        listaNombres.toArray(new String[0]); 
+        /*
+        Ponemos [0] para indicar que queremos un array del mismo tipo que la lista. 
+        Si ponemos un tamaño mayor, se rellenarán los elementos restantes con null.
+        */
+     
         // Verificar si la lista contiene un elemento con List.contains()
         listaNombres.contains("Pedro"); // Salida: true
 
